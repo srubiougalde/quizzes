@@ -44,22 +44,20 @@
 
   // Returns a number between [0, n)
   function randomNumber(n) {
-    if(isNaN(n)) {
-      throw "Invalid parameter NaN.";
-    }
-    
-    if(n <= 0 || n >= 1000000) {
-      throw "Invalid parameter value must be between 0 and 1,000,000.";
+    if(isNaN(n) || n <= 0 || n >= 1000000) {
+      throw "Parameter value must be between 0 and 1,000,000.";
     }
 
-    for(var i = 1; i < n; i++) {
-      if(flip()) {
-        return i;
+    var result = 0;
+    do {
+      for(var i = 0; i < n; i++) {
+        if(flip()) {
+          result ^= i
+        }
       }
-    }
+    } while(result >= n)
 
-    // if flip() is a false n times then we return a default value
-    return 0;
+    return result;
   }
 
   function flip() {
