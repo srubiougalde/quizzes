@@ -1,0 +1,40 @@
+.center {
+  text-align:center
+}
+
+.table {
+  display:table;
+  border-collapse:separate;
+  border-spacing:2vw;
+  margin: 0 auto;
+}
+
+.row {
+	display:table-row;
+}
+
+.cell {
+  display:table-cell;
+  vertical-align:middle;
+  padding:5px;
+}
+
+.square {
+    width: 14vw;
+    height: 12vw;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.square > span {
+  display: block;
+}
+
+.time-value {
+  font-size: 5vw;
+}
+
+.time-label {
+  font-size: 2vw;
+  color: gray;
+}
