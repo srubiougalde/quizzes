@@ -51,6 +51,7 @@ function randomNumber(n) {
 ### Implementation details
 - Created a basic page to test my randomNumber function
 - Since the requirement of this quizz was to provide the randomNumber funtion I used bootstrap to create the UI taking advantage of the components that are provided
+- The first aproach I implemented was a loop with stop condition using the flip function, this was a pseudorandom number always between 0 and n. After doing some research I found a better approach by applyng XOR based on flip() result, sometimes the random number was greater than 'n' so I used a do-while to regenerate the number to ensure is always between 0 and n 
 ## Serve the application
 1. Go to the project directory.
     * `> cd coinflip` for countdown timer
